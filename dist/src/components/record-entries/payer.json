@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_record_entries_payers",
+    "info": {
+        "displayName": "Payer",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "payer": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user"
+        },
+        "paid": {
+            "type": "decimal",
+            "required": true
+        }
+    }
+}

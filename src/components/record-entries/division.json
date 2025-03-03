@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_record_entries_divisions",
+  "info": {
+    "displayName": "Division"
+  },
+  "options": {},
+  "attributes": {
+    "participant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

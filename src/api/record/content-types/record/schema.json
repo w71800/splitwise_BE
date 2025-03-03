@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "records",
+  "info": {
+    "singularName": "record",
+    "pluralName": "records",
+    "displayName": "Record",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group.group",
+      "inversedBy": "records"
+    },
+    "splitor": {
+      "type": "enumeration",
+      "enum": [
+        "equal",
+        "fixed",
+        "percentage",
+        "ratio"
+      ],
+      "default": "equal",
+      "required": true
+    },
+    "value": {
+      "type": "float",
+      "required": true
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "TWD",
+        "USD",
+        "JPY"
+      ],
+      "default": "TWD",
+      "required": true
+    },
+    "payers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "record-entries.payer",
+      "required": true
+    },
+    "participants": {
+      "type": "component",
+      "repeatable": true,
+      "component": "record-entries.participant",
+      "required": true
+    },
+    "divisions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "record-entries.division"
+    },
+    "fullDate": {
+      "type": "date",
+      "required": true
+    },
+    "isSettlement": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

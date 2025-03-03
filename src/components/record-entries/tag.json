@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_record_entries_tags",
+  "info": {
+    "displayName": "Tag"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}
